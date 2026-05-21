@@ -2,14 +2,11 @@
 	const $ = (sel, root = document) => root.querySelector(sel);
 	const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
-	// Year
 	const y = $("#year");
 	if (y) y.textContent = new Date().getFullYear();
 
-	// Enable hero accent underline animation
 	requestAnimationFrame(() => document.documentElement.classList.add('revealed'));
 
-	// Reveal on scroll (IntersectionObserver)
 	const revealEls = $$('[data-reveal]');
 	const revealNow = (el) => el.classList.add('is-visible');
 	if ('IntersectionObserver' in window) {
@@ -37,7 +34,6 @@
 		});
 	});
 
-	// Smooth scroll (extra smooth + header offset)
 	const headerH = () => 0;
 	const scrollToId = (href) => {
 		const target = $(href);
@@ -137,7 +133,6 @@
 		}
 	});
 
-	// Subtle background drift (pattern feels alive)
 	let bgTick = false;
 	const onScrollBg = () => {
 		if (bgTick) return;
