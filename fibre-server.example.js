@@ -1,12 +1,3 @@
-// fibre-server.example.js
-// minimal node server that keeps your groq keys OFF the client.
-//
-// 1) npm i express
-// 2) set env var GROQ_API_KEYS (comma-separated) and GROQ_FALLBACK_KEYS
-// 3) node fibre-server.example.js
-//
-// WARNING: do NOT commit real keys.
-
 import express from 'express';
 
 const app = express();
